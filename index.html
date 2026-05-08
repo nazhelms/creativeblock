@@ -27,14 +27,18 @@
     }
 
     body {
-      min-height: 100vh;
-      margin: 0;
-      color: var(--ink);
-      font-family: Didot, "Bodoni 72", "Libre Baskerville", Georgia, serif;
-      background:
-        linear-gradient(135deg, rgba(251, 246, 237, 0.96) 0%, rgba(234, 208, 203, 0.34) 48%, rgba(201, 219, 234, 0.32) 100%),
-        linear-gradient(180deg, rgba(201, 219, 234, 0.16) 0%, rgba(234, 208, 203, 0.14) 100%);
-    }
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: Didot, "Bodoni 72", "Libre Baskerville", Georgia, serif;
+  background:
+    linear-gradient(90deg, rgba(251, 246, 237, 0.92) 0%, rgba(251, 246, 237, 0.72) 30%, rgba(251, 246, 237, 0.08) 58%),
+    linear-gradient(180deg, rgba(201, 219, 234, 0.16) 0%, rgba(234, 208, 203, 0.14) 100%),
+    url("background.jpg");
+  background-size: auto, auto, cover;
+  background-position: center, center, center right;
+  background-repeat: no-repeat;
+}
 
     a {
       color: inherit;
@@ -153,11 +157,15 @@
     }
 
     @media (max-width: 760px) {
-      body {
-        background:
-          linear-gradient(180deg, rgba(251, 246, 237, 0.04) 0%, rgba(251, 246, 237, 0.08) 42%, rgba(251, 246, 237, 0.94) 73%, rgba(251, 246, 237, 0.98) 100%),
-          linear-gradient(180deg, rgba(251, 246, 237, 0.98) 0%, rgba(234, 208, 203, 0.28) 100%);
-      }
+     body {
+  background:
+    linear-gradient(180deg, rgba(251, 246, 237, 0.04) 0%, rgba(251, 246, 237, 0.08) 42%, rgba(251, 246, 237, 0.94) 73%, rgba(251, 246, 237, 0.98) 100%),
+    linear-gradient(180deg, rgba(251, 246, 237, 0.98) 0%, rgba(234, 208, 203, 0.28) 100%),
+    url("background.jpg");
+  background-size: auto, auto, cover;
+  background-position: center, center, center top;
+  background-repeat: no-repeat;
+}
 
       .page {
         grid-template-columns: 1fr;
