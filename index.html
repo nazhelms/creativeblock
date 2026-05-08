@@ -1,87 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creative Block</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naz Helms | Links</title>
+  <meta name="description" content="Naz Helms links for Instagram, Amazon Shop, and Like To Know It.">
   <style>
+    :root {
+      --ivory: #fbf6ed;
+      --blush: #ead0cb;
+      --rose: #b98580;
+      --sage: #a8b39b;
+      --sage-deep: #65725f;
+      --powder: #c9dbea;
+      --ink: #393833;
+      --shadow: 0 24px 70px rgba(57, 56, 51, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--ivory);
+    }
+
     body {
+      min-height: 100vh;
       margin: 0;
-      font-family: Georgia, serif;
-      background: #f8f1ec;
-      color: #2f2a26;
-      display: flex;
-      justify-content: center;
-      padding: 40px 20px;
+      color: var(--ink);
+      font-family: Didot, "Bodoni 72", "Libre Baskerville", Georgia, serif;
+      background:
+        linear-gradient(135deg, rgba(251, 246, 237, 0.96) 0%, rgba(234, 208, 203, 0.34) 48%, rgba(201, 219, 234, 0.32) 100%),
+        linear-gradient(180deg, rgba(201, 219, 234, 0.16) 0%, rgba(234, 208, 203, 0.14) 100%);
     }
 
-    .container {
-      max-width: 430px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(22px, 1fr) minmax(280px, 420px) minmax(52vw, 1.7fr);
+      align-items: end;
+      padding: clamp(22px, 4vw, 56px);
+    }
+
+    .card {
+      grid-column: 2;
       width: 100%;
-      text-align: center;
+      margin-bottom: clamp(14px, 5vh, 58px);
+      padding: clamp(22px, 4vw, 34px);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+      background: rgba(251, 246, 237, 0.84);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
 
-    .profile {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #ead8cf;
-      margin-bottom: 20px;
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--sage-deep);
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.73rem;
+      font-weight: 650;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-size: 34px;
-      margin: 0 0 8px;
-      font-weight: normal;
+      margin: 0;
+      font-size: clamp(3rem, 10vw, 5.25rem);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: 0;
     }
 
-    .bio {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 28px;
-      color: #5e5650;
+    .intro {
+      max-width: 26rem;
+      margin: 18px 0 24px;
+      color: #5f5c55;
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.65;
     }
 
-    .link {
-      display: block;
-      text-decoration: none;
-      color: #2f2a26;
-      background: #ffffff;
-      border: 1px solid #e3d2c9;
-      border-radius: 999px;
-      padding: 15px 18px;
-      margin: 12px 0;
-      font-size: 16px;
+    .links {
+      display: grid;
+      gap: 12px;
     }
 
-    .link:hover {
-      background: #f0ded5;
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 54px;
+      padding: 0 18px 0 20px;
+      border: 1px solid rgba(101, 114, 95, 0.23);
+      border-radius: 8px;
+      background: rgba(255, 252, 247, 0.9);
+      color: var(--ink);
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.86rem;
+      font-weight: 650;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .button::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-top: 1.5px solid currentColor;
+      border-right: 1.5px solid currentColor;
+      transform: rotate(45deg);
+      opacity: 0.68;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(185, 133, 128, 0.54);
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 12px 30px rgba(57, 56, 51, 0.12);
+      outline: none;
+    }
+
+    .button:nth-child(2) {
+      background: rgba(234, 208, 203, 0.84);
+    }
+
+    .button:nth-child(3) {
+      background: rgba(201, 219, 234, 0.84);
+    }
+
+    .button.sage {
+      background: rgba(168, 179, 155, 0.86);
     }
 
     .footer {
-      margin-top: 28px;
-      font-size: 13px;
-      color: #8a7a70;
+      margin: 22px 0 0;
+      color: var(--sage-deep);
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        background:
+          linear-gradient(180deg, rgba(251, 246, 237, 0.04) 0%, rgba(251, 246, 237, 0.08) 42%, rgba(251, 246, 237, 0.94) 73%, rgba(251, 246, 237, 0.98) 100%),
+          linear-gradient(180deg, rgba(251, 246, 237, 0.98) 0%, rgba(234, 208, 203, 0.28) 100%);
+      }
+
+      .page {
+        grid-template-columns: 1fr;
+        align-items: end;
+        padding: 20px;
+      }
+
+      .card {
+        grid-column: 1;
+        margin-top: 56vh;
+        margin-bottom: 0;
+        padding: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button {
+        transition: none;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: none;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <img class="profile" src="https://via.placeholder.com/300" alt="Creative Block profile image" />
+  <main class="page" aria-label="Link in bio">
+    <section class="card">
+      <p class="eyebrow">Coastal Edit</p>
+      <h1>Naz Helms</h1>
+      <p class="intro">Soft style notes, favorite finds, and everyday pieces I'd be texting you about.</p>
 
-    <h1>Creative Block</h1>
+      <nav class="links" aria-label="Social links">
+        <a class="button" href="https://www.instagram.com/nazhelms/">Instagram</a>
+        <a class="button" href="https://www.amazon.com/shop/nazhelms?ref=inf_own_nazhelms">Amazon Shop</a>
+        <a class="button" href="https://www.shopltk.com/explore/nazhelms?tab=posts">Like To Know It</a>
+        <a class="button sage" href="https://www.etsy.com/shop/LotusEaterCo">Etsy Shop</a>
+      </nav>
 
-    <p class="bio">
-      A temporary home for creative work, style notes, and links.
-    </p>
-
-    <a class="link" href="https://instagram.com/YOURUSERNAME">Instagram</a>
-    <a class="link" href="https://www.linkedin.com/in/YOURUSERNAME">LinkedIn</a>
-    <a class="link" href="mailto:youremail@example.com">Email</a>
-    <a class="link" href="#">Portfolio Coming Soon</a>
-
-    <p class="footer">Full site coming soon.</p>
+      <p class="footer">@nazhelms</p>
+    </section>
   </main>
 </body>
 </html>
